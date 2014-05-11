@@ -1,11 +1,7 @@
-# Site wide configuration
-
-title:            Site Title
-locale:           en_US
-url:              http://localhost:4000
-
-
 # Jekyll configuration
+title:  Rob N
+locale: en_AU
+url:    http://localhost:4000
 
 permalink:   /:categories/:title/
 markdown:    kramdown
@@ -23,33 +19,20 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
-
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  bio: "Describe your self."
-  email: 
+  name:           Rob N
+  avatar:         bio-photo.jpg
+  bio:            "DevOps for @FastMailFM, dev for @pioneerspacesim, random acts of web, games, graphics, operating systems, Perl, C++, Lua and parenting."
+  email:          robn@robn.io
   disqus-shortname: 
-  twitter: #username
-  facebook: #username
+  twitter: robn
+  facebook: racetrackx
+  github: robn
+  stackoverflow: 12421
+  steam: fce2
   google:
-    plus: #username
-    analytics: 
-    verify: 
-    ad-client: 
-    ad-slot: 
-  bing-verify: 
-  github: #username
-  stackoverflow: #http://stackoverflow.com/users/123456/username
-  linkedin: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
+    plus: RobertNorris
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
