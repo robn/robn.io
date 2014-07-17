@@ -7,7 +7,7 @@ image:
   feature: yellow.jpg
 ---
 
-The latest fancy tool for deploying things is [Docker](http://www.docker.com/). I'm not going to bother telling you about it because the internet is full of folks talking excitedly about it and they can explain it better than me. I've been following it for a year with some interest, but after deploying [GitLab](https://about.gitlab.com/) with Docker last week in about two hours (no exaggeration), I figured it was time to see how to drive this thing. I did this by "dockerising" a simple but non-trivial Perl application.
+The latest fancy tool for deploying things is [Docker](http://www.docker.com/). I've been following it for about a year with some interest, but after deploying [GitLab](https://about.gitlab.com/) with Docker last week in about two hours (no exaggeration), I figured it was time to see how to drive this thing. I did this by "dockerising" a simple but non-trivial Perl application.
 
 ## The point of all this
 
