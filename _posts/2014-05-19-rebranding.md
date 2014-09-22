@@ -2,6 +2,7 @@
 layout: post
 title: Rebranding
 excerpt: "Or: how I learned to stop worrying and love the Internet"
+tags: internet identity blog
 image:
   feature: field.jpg
 ---
