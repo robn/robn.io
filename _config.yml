@@ -1,6 +1,6 @@
 # Jekyll configuration
 title:  Rob N
-locale: en_AU
+locale: en_US
 url:    http://robn.io
 
 permalink:   /:categories/:title/
