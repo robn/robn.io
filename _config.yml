@@ -1,7 +1,7 @@
 # Jekyll configuration
 title:  Rob N
 locale: en_US
-url:    http://robn.io
+url:    https://robn.io
 
 permalink:   /:categories/:title/
 markdown:    kramdown
