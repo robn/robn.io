@@ -27,12 +27,12 @@ owner:
   email:          robn@robn.io
   disqus-shortname: 
   twitter: robn
-  facebook: racetrackx
+#  facebook: racetrackx
   github: robn
-  stackoverflow: 12421
-  steam: margaret
-  google:
-    plus: RobertNorris
+#  stackoverflow: 12421
+#  steam: margaret
+#  google:
+#    plus: RobertNorris
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:
