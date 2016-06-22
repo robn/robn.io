@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>U 2 can U2F</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <style type='text/css'>
+img.flat {
+  background-color: rgba(0,0,0,0) !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.small {
+  font-size: smaller !important;
+}
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <h1>U 2 can U2F</h1>
+          <p>
+            <img class="fragment" src='img/bono.jpg' width='400'>
+          </p>
+          <p class='fragment small'>[pic unrelated]</p>
+          </p>
+
+          <aside class="notes">
+            <p>This talk is about two-factor auth</o>
+            <p>When I mentioned the title someone said "oh, I hope you've got Bono in there</p>
+            <p>So here he is, holding his two factors</p>
+          </aside>
+        </section>
+
+        <section>
+          <h1>Hello!</h1>
+          <div class="fragment">
+            <p>Rob N ★</p>
+            <p>@robn</p>
+          </div>
+          <p class='fragment'>
+            <img class='flat' src='img/fastmail.png' width='400'>
+          </p>
+          <h3 class='fragment'><img class="flat" src='img/australia.png' width='128' style="vertical-align: middle; margin-right: 20px">Australian</h3>
+
+          <aside class="notes">
+            <p>Hello! My name is Rob. I'm on Twitter.</p>
+            <p>I work at FastMail; I know I have some customers in the room, thank you. If you're not a customer, come talk to me so we can fix that. I'm not above bribes; I have stickers.</p>
+            <p>I'm Australian. Americans have an odd fascination with Australians, and because I'm not yet sure how interesting this little talk is I intend to use every export-quality Australian stereotype…</p>
+            <p>to make sure you're all at least slightly entertained</p>
+          </aside>
+        </section>
+
+        <section data-background='img/boot.jpg'>
+        </section>
+
+        <section>
+          <h2>Two-factor authentication</h2>
+          <div class="fragment" style="float: left; margin-left: 100px">
+            <img src='img/serious.jpg' width='300'>
+            <p class="small">Something you know</p>
+            <ul class="fragment small">
+              <li>Password</li>
+            </ul>
+          </div>
+          <div class="fragment" style="float: right; margin-right: 100px">
+            <img src='img/dundee.jpg' width='300'>
+            <p class="small">Something you have</p>
+            <ul class="fragment small">
+              <li>TOTP code</li>
+              <li>SMS</li>
+              <li>Hardware token</li>
+            </ul>
+          </div>
+
+          <aside class="notes">
+            <p>So lets talk about two-factor authentication. Authentication is about presenting claims that prove you are who you say you are.</p>
+            <p>Typically that's something you know. Here we see one of Australia's favourite sons, Yahoo Serious…<br>
+            remembering his password. He's well known in Australia for his good password practices.</p>
+            <p>For a stronger assertion, you can also present something you have, a physical object that only you possess. Here's Australian folk hero Mick "Crocodile" Dundee, with his physical object of choice.</p>
+            <p>Most of us aren't great at knifeplay though, so we're stuck with more mundane items, usually just our cellphones.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Universal two-factor (U2F)</h2>
+          <img src='img/yubikey.png' width='300'>
+          <ul>
+            <li class="fragment">USB-based hardware token</li>
+            <li class="fragment">Single touch to activate</li>
+            <li class="fragment">Receives challenges from the server and signs them</li>
+            <li class="fragment">Yubico, Happlink, Nitrokey, Neowave, Hypersecu, Feitian</li>
+            <li class="fragment">Starts around $10 (Nitrokey U2F)</li>
+          <ul>
+
+          <aside class="notes">
+            <p>U2F is a set of open standards for how to build and communicate with a USB second-factor device.</p>
+            <p>The major improvement over other methods is that applications talk directly to the device, so it's just one button to press.</p>
+            <p>The device takes a challenge from the server, signs them and returns the signature. The server can then verify them to uniquely identify the device.</p>
+            <p>Multiple manufacturers.</p>
+            <p>The cheapest one I've found is ~$10.</p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Universal two-factor (U2F)</h2>
+          <img src='img/keyring.jpg' height='300'>
+          <ul>
+            <li>USB-based hardware token</li>
+            <li>Single touch to activate</li>
+            <li>Receives challenges from the server and signs them</li>
+            <li>Yubico, Happlink, Nitrokey, Neowave, Hypersecu, Feitian</li>
+            <li>Starts around $10 (Nitrokey U2F)</li>
+          <ul>
+
+          <aside class="notes">
+            <p>Unfortunatly no one has done an Australian-themed U2F device, but I live in hope.</p>
+        </section>
+
+        <section>
+          <h2>U2F-capable services</h2>
+          <img src='img/service.jpg' height='400' style="float: left; margin-left: 100px">
+          <div style="padding-left: 500px; text-align: left;">
+            <ul class="fragment" style="width: 500px; margin-top: 20px">
+              <li>Dropbox</li>
+              <li>Github</li>
+              <li>Google</li>
+            </ul>
+            <ul class="fragment" style="width: 500px; margin-top: 20px">
+              <li>pam-u2f (via libu2f)</li>
+            </ul>
+            <ul class="fragment" style="width: 500px; margin-top: 20px">
+              <li>FastMail <span class="small">(~ end of July)</span></li>
+            </ul>
+            <ul class="fragment" style="width: 500px; margin-top: 20px">
+              <li>[… your service here …]</li>
+            </ul>
+          </div>
+
+          <aside class="notes">
+            <p>Three major web services.</p>
+            <p>pam-u2f, for use with the standard Unix authentication stack</p>
+            <p>FastMail… next month</p>
+            <p>Your service…</p>
+            <p>I'm not sure what use they'd have for U2F in Cocklebiddy.</p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Authen::U2F</h2>
+          <img src="img/handshake.jpg" width="300">
+          <ul>
+            <li class="fragment">A pure-Perl implementation of the U2F server spec</li>
+            <div class="fragment">
+              <li>Three functions:</li>
+              <ul>
+                <li>Generate challenges</li>
+                <li>Verify registration signatures</li>
+                <li>Verify authentication signatures</li>
+              </ul>
+            </div>
+            <li class="fragment">Comes with example servers for libu2f and Chromium-based browsers</li>
+          </ul>
+
+          <aside class="notes">
+            <p>Authen::U2F implements the server spec</p>
+            <p>It generates challenges for the device to sign, and can verify the two types of signatures a device can produce: registration signatures, when you're first adding a device to your account, and authentication signatures, when you're trying to log in with your pre-registered device</p>
+            <p>Ships with with examples and a demo server</p>
+            <p>Latham and Howard, the quintessential Australian handshake</p>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Dinner time</h2>
+          <ul>
+            <li class="fragment">Your service is secure, your users are happy…</li>
+            <li class="fragment">Time to go home and have your dinner</li>
+          </ul>
+          <img class="fragment" src='img/vegemite.jpg'>
+          <ul class="fragment">
+            <li>Ask me about U2F</li>
+            <li>Ask me about Australia</li>
+            <li>Slides and demo at robn.io (later today)</li>
+          </ul>
+
+          <aside class="notes">
+            <p>So now you're done!</p>
+            <p>Everything is fine!</p>
+            <p>You can go have dinner now!</p>
+            <p>Thanks a lot, you've been very kind. Come and ask me stuff!</p>
+          </aside>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        center: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
