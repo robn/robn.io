@@ -11,9 +11,11 @@ I gave a keynote at CompCon Australia 2016 about the history of and problems wit
 
 This talk is broad, but not very deep. There's several million things that I wanted to go in to but just couldn't fit into the limited time - I could talk for _days_ on this if allowed. So here I'm adding a bunch of links for further reading, for anyone that wants more info on a particular topic.
 
-I'm writing this page the day before the talk, and will (have) published it not long before the talk (time travel, wow!). So the first people reading this are likely the people seeing the link at the start of the talk, and I'm now somewhere in my introduction. Hello! Come and say hi later!
+I gave out U2F devices to conference attendees after the talk, with one condition: they have to post or say something publically about what they did with it, even if its just adding it to a GitHub account.
 
-Talk slides and speaker notes will be published here some time after the talk, and when the video is made available, that will go here too.
+*Slides*: [A br1ef h1st0ry of P@sswords](/talks/passwords-compcon-2016/Passwords-notes.pdf) [PDF 35M]; [Deckset source](https://github.com/robn/passwords-compcon-2016) [GitHub]
+
+There will be a video of the talk, which I will publish here when it's available.
 
 ## Passwords have always been terrible
 
