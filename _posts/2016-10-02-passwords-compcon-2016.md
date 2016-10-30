@@ -15,7 +15,7 @@ I gave out U2F devices to conference attendees after the talk, with one conditio
 
 *Slides*: [A br1ef h1st0ry of P@sswords](/talks/passwords-compcon-2016/Passwords-notes.pdf) [PDF 35M]; [Deckset source](https://github.com/robn/passwords-compcon-2016) [GitHub]
 
-There will be a video of the talk, which I will publish here when it's available.
+{% include youtube.html code="EiQMfFtvl4Q" start="0" %}
 
 ## Passwords have always been terrible
 
