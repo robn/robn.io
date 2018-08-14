@@ -1,5 +1,5 @@
 # Jekyll configuration
-title:  Rob N
+title:  Rob N ★
 locale: en_US
 url:    https://robn.io
 
@@ -21,7 +21,7 @@ kramdown:
 
 # Site owner
 owner:
-  name:           Rob N
+  name:           Rob N ★
   avatar:         bio-photo.jpg
   bio:            I do things. Mostly computer things. Sometimes I write about them.
   email:          robn@robn.io
